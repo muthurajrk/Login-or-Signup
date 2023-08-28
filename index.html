@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Log In or Sign UP</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="login">
+            <input type="text" name="username" placeholder="Username" autofocus required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button id="login"><span></span>Log-In</button>
+        </div>
+        <div class="signup">
+            <input type="text" name="username" placeholder="Username" autofocus required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="password" placeholder="Confirm-Password" required>
+            <button id="signup"><span></span>Sign-UP</button>
+        </div>
+        <div class="login-signup">
+            <h2>Welcome to BeeVMooK's</h2>
+            <p>The gtreatest Pleasure to have You with Us. Let's begining.</p>
+            <div class="content">
+                <h3 class="lo">Do you want to Log-In ?</h3>
+                <button id="lclick"><span id="lspn"></span>Log-In</button>
+                <h3 class="si">Do you want to Sign-UP ?</h3>
+                <button id="sclick"><span id="sspn"></span>Sing-UP</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const lbtn = document.getElementById("lclick");
+        const sbtn = document.getElementById("sclick");
+        const cont = document.getElementById("container");
+        
+        
+
+        lbtn.addEventListener("click", ()=> {
+            cont.classList.add("sliding-l");
+            cont.classList.remove("sliding-s");
+            lspn.innerHTML = "Log-In Progressing...";
+        })
+        
+        sbtn.addEventListener("click", ()=> {
+            cont.classList.add("sliding-s");
+            cont.classList.remove("sliding-l");
+            sspn.innerHTML = "Sign-UP Progressing...";
+        })
+        </script>
+</body>
+</html>
