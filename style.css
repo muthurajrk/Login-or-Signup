@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+    color: rgb(223, 176, 176);
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #444, black, rgb(223, 176, 176));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    position: absolute;
+    border: 2px;
+    outline: 0;
+    width:620px;
+    height:423px;
+    background-color: white;
+    border-radius: 18px;
+    background-color: rgba(54, 30, 30, 0.2);
+    box-shadow: -2px -2px 10px #fff, 2px 2px 12px #111;
+}
+.login{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.signup{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.login-signup{
+    position: relative;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    font-size: 32px;
+    font-weight: 750;
+    padding: 0px;
+    border-radius: 18px;
+    background: linear-gradient(45deg, red , deeppink);
+    z-index: 2;
+    transition: left 2s;
+/*
+    background-image: url("header-image.png");
+*/
+    background-position: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+input{
+    margin : 8px 0px;
+    padding: 6px;
+    background-color: transparent;
+    text-align: left;
+    width: 222px;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.7);
+    font-size: 16px;
+    font-weight: 100;
+}
+button{
+    position: relative;
+    border: 1px solid;
+    width: 135px;
+    margin: 12px auto;
+    padding: 0;
+    background-color: transparent;
+    font-size: 24px;
+    font-weight: 800;
+    transition: border-radius, color 2s;
+}
+.login-signup button{
+    color: #001;
+    border: 2px solid #001;
+    border-radius: 3px;
+}
+button span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    font-size: 12px;
+    line-height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: transparent;
+    transition: width 0.5s;
+    z-index: -1;
+}
+button:hover{
+    border-radius: 0px;
+    color: whitesmoke;
+    transition: all 1s;
+}
+button:active{
+    transform: scale(0.7);
+}
+button:hover span{
+    background-color: #333;
+    width: 100%;
+    transition: all 0.5s; 
+    overflow: hidden;
+}
+.login-signup h2{
+    position: absolute;
+    width: 180px;
+    line-height: 100%;
+    margin: 0px auto;
+    top: 5%;
+    left: 0;
+    right: 0;
+    font-size: 32px;
+    font-weight: bold;
+    color: #111;
+    text-shadow: 1px 1px 2px whitesmoke;
+}
+.login-signup p{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    width: 250px;
+    line-height: 100%;
+    margin: 10px auto;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    text-shadow: 1px 1px 8px whitesmoke;
+}
+.content{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    width: 280px;
+    line-height: 100%;
+    margin: 20px auto 0px;
+}
+.login-signup h3{
+    font-size: 20px;
+    top: 20;
+    text-shadow: 1px 1px 5px #000;
+}
+/* --------- when login clicked ---------*/
+
+.sliding-l .login-signup{
+    width: 50%;
+    margin: 0;
+    padding: 0px 10px;
+    left: 50%;
+    border-radius: 0px 18px 18px 0px;
+    border-left: 2px solid #333;
+    transition-property: border-radius, border-left;
+    transition: all 0.6s;
+    transition-timing-function: ease-in-out;
+}
+.sliding-s .login-signup{
+    top: 0;
+    left: 0;
+    width: 50%;
+    background: linear-gradient(-45deg, red , deeppink);
+    border-radius: 18px 0px 0px 18px;
+    border-left: 0px;
+    border-right: 2px solid #333 ;
+    transition-property: border-left, border-radius 2s;
+    transition-timing-function: ease-in-out;
+    transition: all 0.6s;
+}
+.sliding-l #login span{
+    background: linear-gradient(45deg, red, deeppink);
+}
+.sliding-s #signup span{
+    background: linear-gradient(-45deg, red, deeppink);
+}
+.sliding-l #lclick span{
+    width:100%;
+    background-color: transparent;
+    color: #111;
+    font-size: small;
+}
+.sliding-l #lclick{ 
+    border: none;
+    border-radius: 0%;
+    color: transparent;
+    border: 2px solid transparent;
+}
+.sliding-s #sclick span{
+    width: 100%;
+    background-color: transparent;
+    color: #111;
+    font-size: small;
+}
+.sliding-s #sclick{
+    border: none;
+    border-radius: 0%;
+    color: transparent;
+    border: 2px solid transparent;
+}
+.sliding-l button #sspn{
+    transition: 0.05s;
+}
+.sliding-s button #lspn{
+    transition: 0.05s;
+}
+
+/*------ that divider for login and signup------*/
+
+/*------ animation-------
+
+@keyframes first-sliding{
+    0% {
+        .login-signup {border-left: 2px dotted transparent;}
+        .sliding-s {color: transparent;}
+        .sliding-l {color: transparent;}
+    }
+    25% {
+        .login-signup{ border-left: 2px dotted rgba(0,0,0, 0.2);}
+
+        .sliding-s {color: transparent;}
+        .sliding-l {color: transparent;}
+    }
+    50% {
+        .login-signup{ border-left: 2px solid rgba(0,0,0, 0.5);}
+        .sliding-s {color: transparent;}
+        .sliding-l {color: transparent;}
+    }
+    75%{ 
+        .login-signup{ border-left: 2px solid #111;}
+        .sliding-s {color: white;}
+        .sliding-l {color: white;}
+    }
+    100% {
+        .login-signup{ border-left: 2px solid #222;}
+        .sliding-s {color: whitesmoke;}
+        .sliding-l {color: whitesmoke;}
+    }
+}    
+*/
